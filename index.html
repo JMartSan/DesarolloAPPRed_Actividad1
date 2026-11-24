@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<link rel="stylesheet" href="styles.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mazda</title>
 </head>
+
 <body>
-    
+    <header class="site-header">
+        <h1>Mazda</h1>
+        <nav class="site-nav">
+            <a href="#Mazda">Mazda</a>
+            <a href="#competicion">Competicion</a>
+            <a href="#videoJuegos">Video juegos</a>
+            <a href="#curiosidades">Curiosidades</a>
+
+        </nav>
+    </header>
+
+    <div class="slideshow-continer">
+
+        <div id="Mazda" class="boxFormat">
+            <h2>Mazda</h2>
+            <div class="textoImagen">
+                <img src="./images/MazdaLogo.png" alt="Coche Mazda">
+                <p>
+                    Mazda Motor Corporation (en japonés: マツダ株式会社, Matsuda Kabushikigaisha ) es un fabricante de
+                    automóviles
+                    japonés fundada en 1920, con sede principal en Hiroshima (planta de Ujina) y con fábricas también en
+                    las
+                    localidades de Nishinoura, Nakanoseki (Hōfu) y Miyoshi (Hiroshima), Japón. En 2010, produjo 1 307
+                    540
+                    unidades con ventas en China, Japón, Europa, América del Sur y Norteamérica. <br>
+
+
+                    <a href="https://es.wikipedia.org/wiki/Mazda" target="_blank">Ampliar informacion</a>
+
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="competicion" class="boxFormat">
+        <h2>Mazda en competicion</h2>
+        <div class="textoImagen">
+
+            <img src="./images/MazdaCompeticion.jpeg" alt="Coche Mazda">
+            <p>
+                A lo largo de sus cien años de historia, Mazda pasó de hacer productos de corcho a convertirse en un
+                fabricante de automóviles independiente, con éxito y presencia en todo el mundo. Para Mazda, la
+                innovación técnica siempre ha sido un elemento central de su apuesta y nunca le ha dado miedo ponerla a
+                prueba en el apasionante mundo de la competición. <br>
+
+
+                <a href="https://automovilismocanario.com/2020/10/27/mazda-una-historia-de-exito-en-el-mundo-de-la-competicion/"
+                    target="_blank">Ampliar informacion</a>
+
+
+            </p>
+
+        </div>
+    </div>
+
+    <div id="videoJuegos" class="boxFormat">
+        <h2>Mazda en video juegos</h2>
+        <div class="slideshow-continer">
+            <div class="textoImagen">
+                <div class="mySlides">
+                    <img src="./images/videoJuegos.jpg" alt="Coche Mazda">
+                </div>
+
+                <div class="mySlides">
+                    <img src="./images/videoJuegos2.jpg" alt="Coche Mazda">
+                </div>
+                <div class="mySlides">
+                    <img src="./images/videoJuegos3.jpg" alt="Coche Mazda">
+                </div>
+                <p>
+                    La presencia de Mazda en los videojuegos se consolidó a finales de los años 90 gracias a los
+                    simuladores
+                    de conducción japoneses y la cultura tuning, convirtiendo a modelos con motor rotativo y ligeros
+                    roadsters en auténticos iconos digitales. La llegada de la primera entrega de Gran Turismo (1997)
+                    permitió a jugadores de todo el mundo conducir modelos japoneses difíciles de ver fuera de Asia,
+                    destacando el Mazda MX-5 (Miata) como coche de iniciación ideal y el Mazda Savanna RX-7 por su
+                    equilibrio y motor rotativo.
+                    <br>
+                    <a href="https://www.gran-turismo.com/es/gt7/carlist/id/car296" target="_blank">Ampliar
+                        informacion</a>
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+        <div id="curiosidades" class="boxFormat">
+            <div class="textoImagen">
+                <h2>Curiosidades de la marca</h2>
+                <img src="./images/motor-wankel.gif" alt="Coche Mazda">
+                <p>
+                    Pocas marcas se han aventurado a fabricar motores rotativos. Entre ellas están Mercedes-Benz,
+                    Citroën y
+                    Mazda. Este tipo de propulsores se caracterizan por ser pequeños, silenciosos y potentes; sin
+                    embargo,
+                    su coste de mantenimiento es mayor ya que sus segmentos se desgastan antes y su nivel de emisiones
+                    es
+                    mucho más elevado, algo que no es bienvenido en las ciudades donde cada vez prima más la normativa
+                    anticontaminación.
+                    <br>
+                    <a href="https://www.race.es/motor-rotativo-wankle" target="_blank">Ampliar informacion</a>
+
+                </p>
+
+            </div>
+        </div>
 </body>
+
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Cambia cada 2 segundos
+    }
+</script>
+
 </html>

@@ -1,0 +1,133 @@
+/* Quita los bordes blancos del navegador y asigna una fuente*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* La pieza completa del header */
+.site-header {
+    background-image: url(./images/bg.png);
+    width: 100%;             
+    padding: 30px 20px;      
+    text-align: center;      
+    box-sizing: border-box;  
+}
+
+.site-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+}
+
+.site-header p {
+    margin: 0 0 20px 0;           
+    font-size: 1.1rem;
+}
+
+/* Enlaces del menú */
+.site-nav a {
+    color: whitesmoke;
+    text-decoration: none;     
+    margin: 0 15px;            
+    font-weight: bold;
+}
+
+.site-nav a:hover {
+    color: rgb(255, 140, 0);           
+}
+
+/*
+    Estilos del div contenedor de imagenes y texto
+*/
+.boxFormat {
+    background-color: whitesmoke;     
+    max-width: 600px;                 
+    margin: 30px auto;                
+    padding: 20px;                     
+    border-radius: 12px;               
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
+    text-align: center;                 
+}
+
+.boxFormat img {
+    width: 100%;                        
+    height: auto;
+    border-radius: 8px;                 
+    margin: 15px 0;   
+    transition: 0.5s;     
+    display: block;             
+}
+
+
+.boxFormat img:hover {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.boxFormat p {
+    color: #333333;
+    text-align: left;                  
+    line-height: 1.6;
+}
+
+
+/*
+    Efecto de hover con la imagen y el texto debajo
+*/
+.textoImagen {
+    position: relative;        
+    width: 100%;
+    margin: 15px 0;
+}
+
+.textoImagen img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    transition: opacity 0.5s;
+    position: relative;
+    z-index: 2;             /* Posicion de la imagen en el eje Z. 1>2 por lo que está delante del texto */    
+}
+
+.textoImagen p {
+    position: absolute;        
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 90%;
+    margin: 0;
+    color: #333333;
+    text-align: center;
+    z-index: 1;                /* Posicion del texto en el eje Z 1<2 por lo que está detras de la imagen */
+}
+
+.textoImagen:hover img {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.textoImagen a {
+    display: block;          
+    width: fit-content;      
+    margin: 10px auto 0;
+    color: black;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
